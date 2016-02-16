@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA0\sikorsk4_DA0_CpE301_S16\sikorsk4_DA0_CpE301_S16\main.asm Mon Feb 15 21:50:09 2016
+AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA0\DA0T1\sikorsk4_DA0_CpE301_S16\sikorsk4_DA0_CpE301_S16\main.asm Mon Feb 15 22:14:57 2016
 
 
 EQU  SIGNATURE_000 0000001e
@@ -695,10 +695,10 @@ EQU  ACIaddr      0000002e
 EQU  TWIaddr      00000030
 EQU  SPMRaddr     00000032
 EQU  INT_VECTORS_SIZE 00000034
-EQU  a            0000001f
-EQU  b            0000001f
-EQU  c            0000001f
-EQU  d            0000001f
-EQU  e            0000001f
+EQU  a            00000023
+EQU  b            00000025
+EQU  c            0000002a
+EQU  d            00000030
+EQU  e            0000003b
 CSEG OVER         0000000d
 CSEG DONE         0000000e

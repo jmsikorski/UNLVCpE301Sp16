@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA0\sikorsk4_DA0_CpE301_S16\sikorsk4_DA0_CpE301_S16\main.asm Mon Feb 15 21:50:09 2016
+AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA0\DA0T1\sikorsk4_DA0_CpE301_S16\sikorsk4_DA0_CpE301_S16\main.asm Mon Feb 15 22:14:57 2016
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc\m328pdef.inc'
                  
@@ -992,23 +992,23 @@ AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp1
                  
                  
                  ; Replace with your application code
-                 	.EQU a = 31	; Using variables for code efficiency
-                 	.EQU b = 31
-                 	.EQU c = 31
-                 	.EQU d = 31
-                 	.EQU e = 31
+                 	.EQU a = 35	; Using variables for code efficiency
+                 	.EQU b = 37
+                 	.EQU c = 42
+                 	.EQU d = 48
+                 	.EQU e = 59
                  
 000000 9a22      	SBI		DDRB, 2		;Set Pin 2 of B register to output
 000001 e014      	LDI		R17, 0x04	;Set register 3 to 4
-000002 5e01      	SUBI	R16, -a		;Using SUBI for speed to not haveZ to load
+000002 5d0d      	SUBI	R16, -a		;Using SUBI for speed to not haveZ to load
 000003 f04b      	BRVS	OVER;		;If there is overflow, jump to OVER
-000004 5e01      	SUBI	R16, -b		;Using SUBI for speed to not have to load
+000004 5d0b      	SUBI	R16, -b		;Using SUBI for speed to not have to load
 000005 f03b      	BRVS	OVER;		;If there is overflow, jump to OVER
-000006 5e01      	SUBI	R16, -c		;Using SUBI for speed to not have to load
+000006 5d06      	SUBI	R16, -c		;Using SUBI for speed to not have to load
 000007 f02b      	BRVS	OVER;		;If there is overflow, jump to OVER
-000008 5e01      	SUBI	R16, -d		;Using SUBI for speed to not have to load
+000008 5d00      	SUBI	R16, -d		;Using SUBI for speed to not have to load
 000009 f01b      	BRVS	OVER;		;If there is overflow, jump to OVER
-00000a 5e01      	SUBI	R16, -e		;Using SUBI for speed to not have to load
+00000a 5c05      	SUBI	R16, -e		;Using SUBI for speed to not have to load
 00000b f00b      	BRVS	OVER		;If there is overflow, jump to OVER
 00000c c001      	RJMP	DONE		;Jump to end
                  OVER:
