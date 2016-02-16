@@ -7,15 +7,15 @@
 
 
 ; Replace with your application code
-	.EQU a = 31	; Using variables for code efficiency
-	.EQU b = 31
-	.EQU c = 31
-	.EQU d = 31
-	.EQU e = 31
+	.EQU a = 35	; Using variables for code efficiency
+	.EQU b = 37
+	.EQU c = 42
+	.EQU d = 48
+	.EQU e = 59
 
 	SBI		DDRB, 2		;Set Pin 2 of B register to output
 	LDI		R17, 0x04	;Set register 3 to 4
-	SUBI	R16, -a		;Using SUBI for speed to not have to load
+	SUBI	R16, -a		;Using SUBI for speed to not haveZ to load
 	BRVS	OVER;		;If there is overflow, jump to OVER
 	SUBI	R16, -b		;Using SUBI for speed to not have to load
 	BRVS	OVER;		;If there is overflow, jump to OVER
