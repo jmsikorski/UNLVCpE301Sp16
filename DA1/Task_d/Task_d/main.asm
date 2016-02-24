@@ -28,7 +28,8 @@ Divide:
 	CPI		COUNT, 0				;Loop until Counter equals 0
 	BRNE	Divide
 	
-	ANDI	R7, 0					;Clear R7
+	LDI		TEMP1, 0
+	AND	R7, TEMP1				;Clear R7
 	CPI		R24, 0					;Check if R24 has a value (i.e. R23 has overflowed)
 	BREQ	End1					;If R23 hasn't overflown, jump to end
 	LDI		TEMP1, 8				;Set bit 3 high

@@ -1,10 +1,10 @@
 
-AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm Fri Feb 19 19:39:14 2016
+AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm Tue Feb 23 18:00:26 2016
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc\m328pdef.inc'
 C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm(1): Including file 'C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc'
                  
-                 .INCLUDE "header.inc"
+                 .INCLUDE "header.inc"				;Header file contains macros & subroutines
                  
                  ;***** Created: 2011-02-09 12:03 ******* Source: ATmega328P.xml **********
                  ;*************************************************************************
@@ -988,9 +988,9 @@ C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\
                  
                  ; Author : jmsikorski
                  ;
-                 .ORG	0x500
+                 .ORG	0x30			;Place after program code
                  
-                 .MACRO INITSTACK
+                 .MACRO INITSTACK		;Initialize Stack Pointer
                  	LDI		R16, HIGH(RAMEND)
                  	OUT		SPH, R16
                  	LDI		R16, LOW(RAMEND)
@@ -1001,107 +1001,110 @@ C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\
                  .DEF	COUNT = R18		;R18 is used for loop counting
                  
                  Div3:					;Checks if a value is divisible by 3
-                 						;Value is retrieved from top of the stack
-000500 930f      	PUSH	R16			;Save R16 state
-000501 939f      	PUSH	R25			;Save R25 state
-000502 936f      	PUSH	R22			;Save R22 state
-000503 932f      	PUSH	COUNT		;Save Count state
-000504 e090      	LDI		R25, 0		;Clear summing register
-000505 e060      	LDI		R22, 0		;Store 0 value
-000506 e024      	LDI		COUNT, 4	;Loop Counter
-000507 2f01      	MOV		R16, TEMP1
+                 						;Value is stored in TEMP1 register
+                 						;Algorithm subtracts odd bits and adds even bits
+                 						;If the sum is 0, 3, or -3 then TEMP1 is divisible by 3
+000030 930f      	PUSH	R16			;Save R16 state
+000031 939f      	PUSH	R25			;Save R25 state
+000032 936f      	PUSH	R22			;Save R22 state
+000033 932f      	PUSH	COUNT		;Save Count state
+000034 e090      	LDI		R25, 0		;Clear summing register
+000035 e060      	LDI		R22, 0		;Store 0 value
+000036 e024      	LDI		COUNT, 4	;Loop Counter
+000037 2f01      	MOV		R16, TEMP1
                  Repeat3:
-000508 0f11      	LSL		TEMP1		;Shift out MSB of TEMP1
-000509 0b96      	SBC		R25, R22	;Subtract carry from count
-00050a 0f11      	LSL		TEMP1		;Shift out MSB of TEMP1
-00050b 1f96      	ADC		R25, R22	;Add carry to count
-00050c 952a      	DEC		COUNT		;Decrement loop counter
-00050d 3020      	CPI		COUNT, 0	;Check loop counter
-00050e f7c9      	BRNE	Repeat3		;Stay in loop
-00050f 3090      	CPI		R25, 0		
-000510 f029      	BREQ	Add3		;If count != 0 don't add
-000511 3093      	CPI		R25, 3
-000512 f019      	BREQ	Add3		;If count != 3 don't add
-000513 3f9d      	CPI		R25, -3
-000514 f009      	BREQ	Add3		;If count != -3 don't add
-000515 c002      	RJMP	End3
+000038 0f11      	LSL		TEMP1		;Shift out MSB of TEMP1
+000039 0b96      	SBC		R25, R22	;Subtract carry from count
+00003a 0f11      	LSL		TEMP1		;Shift out MSB of TEMP1
+00003b 1f96      	ADC		R25, R22	;Add carry to count
+00003c 952a      	DEC		COUNT		;Decrement loop counter
+00003d 3020      	CPI		COUNT, 0	;Check loop counter
+00003e f7c9      	BRNE	Repeat3		;Stay in loop
+00003f 3090      	CPI		R25, 0		
+000040 f029      	BREQ	Add3		;If count != 0 don't add
+000041 3093      	CPI		R25, 3
+000042 f019      	BREQ	Add3		;If count != 3 don't add
+000043 3f9d      	CPI		R25, -3
+000044 f009      	BREQ	Add3		;If count != -3 don't add
+000045 c002      	RJMP	End3
                  Add3:
-000516 0f80      	ADD		R24, R16	;Add the value to R24
-000517 1f76      	ADC		R23, R22	;Add the carry if any to R25		
+000046 0f80      	ADD		R24, R16	;Add the value to R24
+000047 1f76      	ADC		R23, R22	;Add the carry if any to R25		
                  End3:
-000518 912f      	POP		COUNT		;Restore Count
-000519 916f      	POP		R22			;Restore R22
-00051a 919f      	POP		R25			;Restore R25
-00051b 910f      	POP		R16			;Restore R16
-00051c 9508      	RET					;Return to program
+000048 912f      	POP		COUNT		;Restore Count
+000049 916f      	POP		R22			;Restore R22
+00004a 919f      	POP		R25			;Restore R25
+00004b 910f      	POP		R16			;Restore R16
+00004c 9508      	RET					;Return to program
                  
                  Div7:					;Checks if a value is divisible by 7
-                 						;Value is retrieved from top of the stack
-00051d 930f      	PUSH	R16
-00051e 939f      	PUSH	R25			;Save R25 state
-00051f 936f      	PUSH	R22			;Save R22 state
-000520 932f      	PUSH	COUNT		;Save Count state
-000521 e090      	LDI		R25, 0		;Clear summing register1
-000522 e060      	LDI		R22, 0		;Store 0 value
-000523 e023      	LDI		COUNT, 3	;Loop counter
-000524 2f01      	MOV		R16, TEMP1
-                 Repeat7:
-000525 fd10      	SBRC	TEMP1, 0		;Add 1 if bit 0 is 1
-000526 5f9f      	SUBI	R25, -1
-000527 fd11      	SBRC	TEMP1, 1		;Add 2 if bit 1 is 1
-000528 5f9e      	SUBI	R25, -2
-000529 fd12      	SBRC	TEMP1, 2		;Add 4 if bit 1 is 1
-00052a 5f9c      	SUBI	R25, -4
-00052b 9516      	LSR		TEMP1		;Shift out 1st 3 bits
-00052c 9516      	LSR		TEMP1
-00052d 9516      	LSR		TEMP1
-00052e 952a      	DEC		COUNT
-00052f 3020      	CPI		COUNT, 0
-000530 f7a1      	BRNE	Repeat7
-000531 5097      	SUBI	R25, 7
-000532 f02a      	BRMI	End7
-000533 f011      	BREQ	Add7
-000534 e023      	LDI		COUNT, 3
-000535 cfef      	RJMP	Repeat7
+                 						;Value is stored in TEMP1 register
+                 						;Algorithm divides 8 bits into 3 bit segments,
+                 						;segments are summed, if sum = 7 then TEMP1 is
+                 						;divisible by 7, if sum > 7, repeat summation 
+00004d 930f      	PUSH	R16			;Save R16 state
+00004e 939f      	PUSH	R25			;Save R25 state
+00004f 936f      	PUSH	R22			;Save R22 state
+000050 932f      	PUSH	COUNT		;Save Count state
+000051 e090      	LDI		R25, 0		;Clear summing register1
+000052 e060      	LDI		R22, 0		;Store 0 value
+000053 e023      	LDI		COUNT, 3	;Loop counter
+000054 2f01      	MOV		R16, TEMP1	;Save TEMP1 value
+                 Repeat7:				
+000055 fd10      	SBRC	TEMP1, 0	;Add 1 if bit 0 is 1
+000056 5f9f      	SUBI	R25, -1
+000057 fd11      	SBRC	TEMP1, 1	;Add 2 if bit 1 is 1
+000058 5f9e      	SUBI	R25, -2
+000059 fd12      	SBRC	TEMP1, 2	;Add 4 if bit 1 is 1
+00005a 5f9c      	SUBI	R25, -4
+00005b 9516      	LSR		TEMP1		;Shift out 1st 3 bits
+00005c 9516      	LSR		TEMP1
+00005d 9516      	LSR		TEMP1
+00005e 952a      	DEC		COUNT		;Decrement Counter		
+00005f 3020      	CPI		COUNT, 0	;Loop until Counter equals 0
+000060 f7a1      	BRNE	Repeat7
+000061 5097      	SUBI	R25, 7		;Subtract 7 from sum register
+000062 f02a      	BRMI	End7		;If Sum less than 0, not divisible by 7
+000063 f011      	BREQ	Add7		;If Sum equal 7, divisible by 7
+000064 e023      	LDI		COUNT, 3	;If greater than 0, sum again
+000065 cfef      	RJMP	Repeat7
                  
                  Add7:
-000536 0f50      	ADD		R21, R16
-000537 1f46      	ADC		R20, R22
+000066 0f40      	ADD		R20, R16	;Add the value to R20
+000067 1f56      	ADC		R21, R22	;Add the carry if any to R21
                  End7:
-000538 910f      	POP		R16
-000539 912f      	POP		COUNT		;Restore Count
-00053a 916f      	POP		R22			;Restore R22
-00053b 919f      	POP		R25			;Restore R25
-00053c 9508      	RET					;Return to program
-                 			
-                 
-                 .ORG 0x00
-                 .EQU	Var_Address = 0x100;
-                 .EQU	Num = 25
+000068 912f      	POP		COUNT		;Restore Count
+000069 916f      	POP		R22			;Restore R22
+00006a 919f      	POP		R25			;Restore R25
+00006b 910f      	POP		R16			;Restore R16
+00006c 9508      .ORG 0x00							;Begining of code
+                 .EQU	Var_Address = 0x100;		;Variable for values array pointer
+                 .EQU	Num = 25					;Variable for number of values
 000000 e008
 000001 bf0e
 000002 ef0f
 000003 bf0d      	INITSTACK
                  
-000004 e0e0      	LDI		ZL, LOW(Var_Address)
+000004 e0e0      	LDI		ZL, LOW(Var_Address)	;Load Z with variable array address
 000005 e0f1      	LDI		ZH, HIGH(Var_Address)
-000006 e71f      	LDI		TEMP1, LOW(RAMEND/2)
-000007 e129      	LDI		COUNT, Num
+000006 e71f      	LDI		TEMP1, LOW(RAMEND/2)	;Load Temp1 with initial value 
+000007 e129      	LDI		COUNT, Num				;Number of values to add
+                 	
                  GetNum:
-000008 9311      	ST		Z+, TEMP1
-000009 5f1c      	SUBI	TEMP1, -4
-00000a 952a      	DEC		COUNT
-00000b 3020      	CPI		COUNT, 0
+000008 9311      	ST		Z+, TEMP1				;Store Temp1 into (Z) then increment Z
+000009 5f1c      	SUBI	TEMP1, -4				;Update Temp1 value
+00000a 952a      	DEC		COUNT					;Decrement Counter
+00000b 3020      	CPI		COUNT, 0				;Loop until Counter equals 0
 00000c f7d9      	BRNE	GetNum
                  
-00000d e0e0      	LDI		ZL, LOW(Var_Address)
+00000d e0e0      	LDI		ZL, LOW(Var_Address)	;Load Z with array index[0]
 00000e e0f1      	LDI		ZH, HIGH(Var_Address)
-00000f e129      	LDI		COUNT, Num
+00000f e129      	LDI		COUNT, Num				;Variable Counter
                  Divide7:
-000010 9111      	LD		TEMP1, Z+
-000011 940e 051d 	CALL	Div7
-000013 952a      	DEC		COUNT
-000014 3020      	CPI		COUNT, 0
+000010 9111      	LD		TEMP1, Z+				;Load TEMP1 with the value in (Z), post increment Z
+000011 940e 004d 	CALL	Div7					;Call Div7 Subroutine
+000013 952a      	DEC		COUNT					;Decrement counter
+000014 3020      	CPI		COUNT, 0				;Repeat until Counter equals 0
 000015 f7d1      	BRNE	Divide7
                  		
                  End1:
@@ -1154,7 +1157,7 @@ Instructions used: 22 out of 113 (19.5%)
 "ATmega328P" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x000a7a    168      0    168   32768   0.5%
+[.cseg] 0x000000 0x0000da    168      0    168   32768   0.5%
 [.dseg] 0x000100 0x000100      0      0      0    2048   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    1024   0.0%
 

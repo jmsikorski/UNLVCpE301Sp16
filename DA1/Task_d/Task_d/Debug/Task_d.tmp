@@ -25,15 +25,15 @@
  </OUTPUT_FILES>
  <LABELS>
   <Div3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>16</LINE></Div3>
-  <Repeat3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>26</LINE></Repeat3>
-  <Add3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>41</LINE></Add3>
-  <End3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>44</LINE></End3>
-  <Div7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>51</LINE></Div7>
-  <Repeat7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>61</LINE></Repeat7>
-  <End7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>83</LINE></End7>
-  <Add7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>80</LINE></Add7>
-  <GetNum><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>11</LINE></GetNum>
-  <Divide><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>21</LINE></Divide>
-  <End1><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>35</LINE></End1>
+  <Repeat3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>28</LINE></Repeat3>
+  <Add3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>43</LINE></Add3>
+  <End3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>46</LINE></End3>
+  <Div7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>53</LINE></Div7>
+  <Repeat7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>66</LINE></Repeat7>
+  <End7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>88</LINE></End7>
+  <Add7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\header.inc</FILE><LINE>85</LINE></Add7>
+  <GetNum><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>12</LINE></GetNum>
+  <Divide><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>22</LINE></Divide>
+  <End1><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_d\Task_d\main.asm</FILE><LINE>38</LINE></End1>
  </LABELS>
 </ASSEMBLER_INFO>

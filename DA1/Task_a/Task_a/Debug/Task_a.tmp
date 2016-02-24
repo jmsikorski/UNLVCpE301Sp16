@@ -25,13 +25,13 @@
  </OUTPUT_FILES>
  <LABELS>
   <Div3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>17</LINE></Div3>
-  <Repeat3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>27</LINE></Repeat3>
-  <Add3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>42</LINE></Add3>
-  <End3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>45</LINE></End3>
-  <Div7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>52</LINE></Div7>
-  <Repeat7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>62</LINE></Repeat7>
-  <End7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>84</LINE></End7>
-  <Add7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>81</LINE></Add7>
+  <Repeat3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>29</LINE></Repeat3>
+  <Add3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>44</LINE></Add3>
+  <End3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>47</LINE></End3>
+  <Div7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>54</LINE></Div7>
+  <Repeat7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>67</LINE></Repeat7>
+  <End7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>89</LINE></End7>
+  <Add7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\header.inc</FILE><LINE>86</LINE></Add7>
   <Get25><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\main.asm</FILE><LINE>10</LINE></Get25>
   <End1><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\main.asm</FILE><LINE>17</LINE></End1>
  </LABELS>

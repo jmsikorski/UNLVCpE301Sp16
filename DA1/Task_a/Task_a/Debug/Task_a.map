@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\main.asm Fri Feb 19 19:23:11 2016
+AVRASM ver. 2.1.57  C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_a\Task_a\main.asm Tue Feb 23 17:53:10 2016
 
 
 EQU  SIGNATURE_000 0000001e
@@ -698,13 +698,13 @@ EQU  INT_VECTORS_SIZE 00000034
 DEF  TEMP1        r17
 DEF  COUNT        r18
 EQU  Var_Address  00000100
-CSEG Div3         00000500
-CSEG Repeat3      00000508
-CSEG Add3         00000516
-CSEG End3         00000518
-CSEG Div7         0000051d
-CSEG Repeat7      00000525
-CSEG End7         00000538
-CSEG Add7         00000536
+CSEG Div3         00000020
+CSEG Repeat3      00000028
+CSEG Add3         00000036
+CSEG End3         00000038
+CSEG Div7         0000003d
+CSEG Repeat7      00000045
+CSEG End7         00000058
+CSEG Add7         00000056
 CSEG Get25        00000008
 CSEG End1         0000000d

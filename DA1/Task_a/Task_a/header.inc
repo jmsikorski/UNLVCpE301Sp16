@@ -1,7 +1,7 @@
 ; Created: 2/19/2016 1:39:33 PM
 ; Author : jmsikorski
 ;
-.ORG	0x500			;Place after program code
+.ORG	0x20			;Place after program code
 
 .MACRO INITSTACK		;Initialize Stack Pointer
 	LDI		R16, HIGH(RAMEND)
