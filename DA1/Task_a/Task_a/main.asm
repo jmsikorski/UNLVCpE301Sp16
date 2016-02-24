@@ -1,0 +1,18 @@
+.INCLUDE "header.inc"
+.ORG 0x00
+
+	INITSTACK
+
+	LDI		ZL, LOW(Var_Address)
+	LDI		ZH, HIGH(Var_Address)
+	LDI		TEMP1, LOW(RAMEND/2)
+	LDI		COUNT, 25
+Get25:
+	ST		Z+, TEMP1
+	SUBI	TEMP1, -4
+	DEC		COUNT
+	CPI		COUNT, 0
+	BRNE	Get25
+
+End1:
+	RJMP	End1

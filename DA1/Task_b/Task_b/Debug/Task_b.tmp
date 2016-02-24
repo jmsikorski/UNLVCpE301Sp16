@@ -1,0 +1,39 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc</DIR>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\Debug\Task_b.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Task_b.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Task_b.map</FILE>
+  <FILE>Task_b.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <Div3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>16</LINE></Div3>
+  <Repeat3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>26</LINE></Repeat3>
+  <Add3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>41</LINE></Add3>
+  <End3><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>44</LINE></End3>
+  <Div7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>51</LINE></Div7>
+  <Repeat7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>61</LINE></Repeat7>
+  <End7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>83</LINE></End7>
+  <Add7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\header.inc</FILE><LINE>80</LINE></Add7>
+  <GetNum><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm</FILE><LINE>11</LINE></GetNum>
+  <Divide7><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm</FILE><LINE>21</LINE></Divide7>
+  <End1><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA1\Task_b\Task_b\main.asm</FILE><LINE>28</LINE></End1>
+ </LABELS>
+</ASSEMBLER_INFO>
