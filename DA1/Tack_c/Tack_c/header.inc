@@ -1,9 +1,9 @@
 ; Created: 2/19/2016 1:39:33 PM
 ; Author : jmsikorski
 ;
-.ORG	0x500
+.ORG	0x500			;Place after program code
 
-.MACRO INITSTACK
+.MACRO INITSTACK		;Initialize Stack Pointer
 	LDI		R16, HIGH(RAMEND)
 	OUT		SPH, R16
 	LDI		R16, LOW(RAMEND)
@@ -14,7 +14,9 @@
 .DEF	COUNT = R18		;R18 is used for loop counting
 
 Div3:					;Checks if a value is divisible by 3
-						;Value is retrieved from top of the stack
+						;Value is stored in TEMP1 register
+						;Algorithm subtracts odd bits and adds even bits
+						;If the sum is 0, 3, or -3 then TEMP1 is divisible by 3
 	PUSH	R16			;Save R16 state
 	PUSH	R25			;Save R25 state
 	PUSH	R22			;Save R22 state
@@ -49,42 +51,45 @@ End3:
 	RET					;Return to program
 
 Div7:					;Checks if a value is divisible by 7
-						;Value is retrieved from top of the stack
-	PUSH	R16
+						;Value is stored in TEMP1 register
+						;Algorithm divides 8 bits into 3 bit segments,
+						;segments are summed, if sum = 7 then TEMP1 is
+						;divisible by 7, if sum > 7, repeat summation 
+	PUSH	R16			;Save R16 state
 	PUSH	R25			;Save R25 state
 	PUSH	R22			;Save R22 state
 	PUSH	COUNT		;Save Count state
 	LDI		R25, 0		;Clear summing register1
 	LDI		R22, 0		;Store 0 value
 	LDI		COUNT, 3	;Loop counter
-	MOV		R16, TEMP1
-Repeat7:
-	SBRC	TEMP1, 0		;Add 1 if bit 0 is 1
+	MOV		R16, TEMP1	;Save TEMP1 value
+Repeat7:				
+	SBRC	TEMP1, 0	;Add 1 if bit 0 is 1
 	SUBI	R25, -1
-	SBRC	TEMP1, 1		;Add 2 if bit 1 is 1
+	SBRC	TEMP1, 1	;Add 2 if bit 1 is 1
 	SUBI	R25, -2
-	SBRC	TEMP1, 2		;Add 4 if bit 1 is 1
+	SBRC	TEMP1, 2	;Add 4 if bit 1 is 1
 	SUBI	R25, -4
 	LSR		TEMP1		;Shift out 1st 3 bits
 	LSR		TEMP1
 	LSR		TEMP1
-	DEC		COUNT
-	CPI		COUNT, 0
+	DEC		COUNT		;Decrement Counter		
+	CPI		COUNT, 0	;Loop until Counter equals 0
 	BRNE	Repeat7
-	SUBI	R25, 7
-	BRMI	End7
-	BREQ	Add7
-	LDI		COUNT, 3
+	SUBI	R25, 7		;Subtract 7 from sum register
+	BRMI	End7		;If Sum less than 0, not divisible by 7
+	BREQ	Add7		;If Sum equal 7, divisible by 7
+	LDI		COUNT, 3	;If greater than 0, sum again
 	RJMP	Repeat7
 
 Add7:
-	ADD		R21, R16
-	ADC		R20, R22
+	ADD		R20, R16	;Add the value to R20
+	ADC		R21, R22	;Add the carry if any to R21
 End7:
-	POP		R16
 	POP		COUNT		;Restore Count
 	POP		R22			;Restore R22
 	POP		R25			;Restore R25
+	POP		R16			;Restore R16
 	RET					;Return to program
 			
 
