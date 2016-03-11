@@ -1,0 +1,21 @@
+;
+; DA2.asm
+;
+; Created: 3/9/2016 10:45:09 PM
+; Author : jmsikorski
+;
+
+.INCLUDE "header.inc"
+.ORG 0x00
+
+	INITSTACK
+
+	SBI		DDRC, 0
+	LDI		R17, 0x01
+	LDI		R16, 0x01
+	OUT		PORTC, R17
+BEGIN:
+	RCALL	DELAY
+	EOR		R17, R16
+	OUT		PORTC, R17
+	RJMP	BEGIN
