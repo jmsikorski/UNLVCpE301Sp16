@@ -1,0 +1,33 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.57</VERSION>
+ <DEVICE>"ATmega328P"</DEVICE>
+ <WORKING_DIR>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc</DIR>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.0.90\avrasm\inc\m328pdef.inc</FILE>
+  <FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\header.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\Debug\Task_3.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Task_3.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Task_3.map</FILE>
+  <FILE>Task_3.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <DELAY><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\header.inc</FILE><LINE>10</LINE></DELAY>
+  <AGAIN><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\header.inc</FILE><LINE>20</LINE></AGAIN>
+  <BEGIN><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\main.asm</FILE><LINE>23</LINE></BEGIN>
+  <NOT5><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\main.asm</FILE><LINE>35</LINE></NOT5>
+  <NOT10><FILE>C:\Users\jmsikorski\Documents\Atmel Studio\7.0\UNLVCpE301Sp16\DA2\DA2T3\Task_3\Task_3\main.asm</FILE><LINE>40</LINE></NOT10>
+ </LABELS>
+</ASSEMBLER_INFO>
