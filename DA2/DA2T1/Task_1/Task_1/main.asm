@@ -5,17 +5,17 @@
 ; Author : jmsikorski
 ;
 
-.INCLUDE "header.inc"
-.ORG 0x00
+.INCLUDE "header.inc"		;Include header file
+.ORG 0x00					;Begining of code goes here
 
-	INITSTACK
+	INITSTACK				;Initialize the stack
 
-	SBI		DDRC, 0
-	LDI		R17, 0x01
-	LDI		R16, 0x01
-	OUT		PORTC, R17
+	SBI		DDRC, 0			;Set PORTC0 to output
+	LDI		R17, 0x01		;Set R17 bit 1 high
+	LDI		R16, 0x01		;Set R16 bit 1 high
+	OUT		PORTC, R17		;Output R17 to PORTC
 BEGIN:
-	RCALL	DELAY
-	EOR		R17, R16
-	OUT		PORTC, R17
+	RCALL	DELAY			;Call delay subroutine
+	EOR		R17, R16		;Toggle R17 bit 1
+	OUT		PORTC, R17		;Output R17 to PORTC
 	RJMP	BEGIN
