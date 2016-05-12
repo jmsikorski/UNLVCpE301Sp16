@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>POD Drone v2.0</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {background-color:#f4f4f4}
+        </style> 
+
+        <link rel="stylesheet" href="client/index.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+        <script src="socket.io/socket.io.js"></script>        
+    </head>
+    <body>
+        <div style="position: absolute; top:15px; left: 15px">
+            <embed type="application/x-vlc-plugin" autoplay="yes" loop="yes" width=763 height="582"
+                target="http://169.254.130.79:8080" />
+            <form action="">
+                <input autocomplete="off" id="m" placeholder="Post message"><button>Send</button>
+            </form>                
+            <div class="log-title">Message Log</div>
+            <div class="log-container">    
+                <ul id="messages"></ul>
+            </div>
+        </div>
+        <div style="position: absolute; top:15px; left: 793px">
+            <embed type="application/x-vlc-plugin" autoplay="yes" loop="yes" width=320 height="230"
+                target="http://10.1.42.189:8090" />
+        </div>
+        <div style="position: absolute; top:260px; left: 793px">
+                <map><img src ="https://maps.googleapis.com/maps/api/staticmap?center=36.109639, -115.142120&zoom=17&size=320x335&key=AIzaSyBR_XXA3e-I_nA-gnunchc--fqQYJQBjUg"/></map>
+        </div>
+        <div style="position: absolute; top:612px; left: 21px">
+            <img src ="client/UNLV_Logo.png" style="width:252px;height:87px;"/>
+        </div>
+        <div style="position: absolute; top:612px; left: 913px">
+            <img src ="client/rebel_logo.png" style="width:127px;height:87px;"/>
+        </div>
+        <div style="position: absolute; top:612px; left: 348px">
+        <table style="width:610px">
+            <tr><td>CO:</td><td>-- ppm</td>
+            <td>Large:</td><td>-- ppft<sup>3</sup></td></tr>
+            <tr><td>C<sub>3</sub>H<sub>8</sub>:</td>
+            <td>-- ppm</td>
+            <td>Small:</td>
+            <td>-- ppft<sup>3</sup></td></tr>
+            <tr><td>CH<sub>4</sub>:</td>
+            <td>-- ppm</td>
+            <td>Temp(&degC):</td>
+            <td>--</td></tr>
+            <tr><td>H<sub>2S</sub></td>
+            <td>-- ppm</td>
+            <td>Temp(&degF):</td>
+            <td>--</td></tr>
+            </font></table>
+        </table>
+        </div>
+        <script src="client/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body {
+    font:13px Helvetica, Arial;
+}
+
+.title {
+    font-size: 2em;
+    padding: 0.5em 0em 0.5em 0em;
+    text-align: center;
+    background-color: rgb(17,94,162);
+    color: white;
+}
+
+.log-title {
+    color: rgb(177,2,2);
+    padding: 10px;
+    position: relative;
+    top: 102px;
+    left: -21px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.container {
+    padding: 1em 0em;
+}
+
+.sub-title {
+    font-size: 2em;
+}
+
+.user-circle, .my-circle {
+    width: 3em;
+    height: 3em;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 1em;
+    color: white;
+}
+
+.user-circle {
+    background-color: #2ecc71;
+}
+
+.my-circle {
+    background-color: rgb(17,94,162);
+}
+
+.user-circle span, .my-circle span, #led-container span {
+    vertical-align: middle;
+    vertical-align: -webkit-baseline-middle;
+}
+
+#led-container {
+    width: 4em;
+    height: 2.5em;
+    margin-left: 1em;
+    text-align: center;
+}
+
+.off {
+    background-color: #bdc3c7;
+    border: 1px solid #7f8c8d;
+}
+
+.on {
+    background-color: limegreen;
+    border: 1px solid #7f8c8d;
+}
+
+#led-container > span {
+    padding: 3em 0em;
+    color: white;
+    font-weight: bold;
+}
+
+#led-link {
+    margin: 1em 1em;
+    color: #3498db;
+    font-weight: bold;
+    font-size: 1.3em;
+    border: 2px solid currentColor;
+    border-radius: 5px;
+}
+
+#led-link-container {
+    margin-top: 1em;
+}
+
+
+.log-container {
+    height: 10em;
+    position: relative;
+    top: 102px;
+    left: -21px;
+    overflow-y: scroll;
+}
+
+form {
+    background: rgb(102,102,102);
+    padding: 3px;
+    position: relative;
+    top: 102px;
+    left: -15px;
+    width: 1128px;
+}
+
+form input {
+    border: 0;
+    padding: 10px;
+    width: 85%;
+    margin-right: .5%
+}
+
+form button {
+    width: 13%;
+    background: rgb(177,2,2);
+    font-weight: bold;
+    border: none;
+    padding: 10px 3px;
+}
+
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 30;
+}
+
+#messages li {
+    padding: 5px 10px
+}
+
+#messages li:nth-child(odd) {
+    background: rgba(233,233,222, 0.5);
+}
+
+#messages li span {
+    color: gray;
+    font-style: italic;
+}
